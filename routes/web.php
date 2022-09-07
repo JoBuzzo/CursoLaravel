@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\CommentController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::delete('/comments/{id}', [CommentController::class, 'delete'])->name('comments.delete');
 Route::get('/users/{id}/comments/create', [CommentController::class, 'create'])->name('comments.create');
 Route::get('/users/{user}/comments/{id}', [CommentController::class, 'edit'])->name('comments.edit');
 Route::put('/comments/{id}', [CommentController::class, 'update'])->name('comments.update');
