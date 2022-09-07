@@ -44,7 +44,7 @@
             <a href="{{ route('comments.edit', ['user' => $user->id, 'id' => $comment->id]) }}"  class="bg-green-200 rounded-full py-2 px-6">Editar</a>
         </td>
         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        <form action="{{ route('comments.delete', $user->id) }}" method="POST">
+        <form action="{{ route('comments.delete', $comment->id) }}" method="POST">
         @method('DELETE')
         @csrf
         <button type="submit" class="rounded-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4">Deletar</button>

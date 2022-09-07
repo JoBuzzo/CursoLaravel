@@ -88,7 +88,7 @@ class CommentController extends Controller
             return redirect()->back();
         }
         $comment->delete();
-        return redirect()->route('comments.index', $comment->user_id);
+        return redirect()->route('comments.index', $comment->id);
     }
 
 }
