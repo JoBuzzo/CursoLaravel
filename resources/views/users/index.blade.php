@@ -3,11 +3,12 @@
 @section('title', 'Lista dos Usuários')
 
 @section('content')
-<h1 class="text-2x1 font-semibold leading-tigh py-2">
+<div class="w-full bg-gray-200 hover:bg-gray-100 shadow-md rounded px-4 py-2 text-right grid grid-cols-2 gap-4">
+  <h1 class="text-2x1 text-left">
     Listagem dos usuários
-    <a href="{{ route('users.create') }}" class="shadow bg-blue-600 hover:bg-blue-900 rounded-full text-white px-4 text-sm">+</a>
-</h1>
-
+  </h1>
+    <a href="{{ route('users.create') }}" class="shadow bg-blue-600 hover:bg-blue-900 rounded-full text-white px-5 py-2 place-self-end">+</a>
+</div>
 <form action="{{ route('users.index') }}" method="GET" class="py-5">
     <input type="text" name="search" placeholder="Pesquisar" class="md:w-1/6 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500">
     <button class="shadow bg-gray-200 hover:bg-gray-100 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded">Pesquisar</button>
