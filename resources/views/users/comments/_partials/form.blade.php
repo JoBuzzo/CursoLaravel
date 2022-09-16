@@ -24,7 +24,7 @@
     >
     Visível?
     </label>   
-    <button type="submit" class="w-full shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
+    <button type="submit" class="w-full shadow bg-blue-500 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ">
         Enviar
     </button>
 </div>
