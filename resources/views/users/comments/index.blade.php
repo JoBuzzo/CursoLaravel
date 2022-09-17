@@ -3,15 +3,18 @@
 @section('title', "Comentários do Usuáro {$user->name}")
 
 @section('content')
+<div class="text-right my-8">
+  <a href="{{ route('users.index') }}"  class="bg-red-500 hover:bg-red-400 text-white rounded-full py-2 px-4 place-self-end">Voltar</a>
+</div>
+
 <div class="w-full bg-gray-200 hover:bg-gray-100 shadow-md rounded px-4 py-2 text-right grid grid-cols-2 gap-4">
   <h1 class="text-2x1 text-left">
     Comentários do Usuáro {{ $user->name }}
   </h1>
-  <div class="text-right grid grid-cols-2 gap-4">
-    <a href="{{ route('comments.create', $user->id) }}" class="shadow bg-blue-600 hover:bg-blue-900 rounded-full text-white py-2 px-4 text-sm place-self-end">+</a>
-    <a href="{{ route('users.index') }}"  class="bg-red-500 hover:bg-red-400 text-white rounded-full py-2 px-4 place-self-end">Voltar</a>
+  <div class="text-right">
+    <a href="{{ route('comments.create', $user->id) }}" class="shadow bg-blue-600 hover:bg-blue-900 rounded-full text-white py-2 px-4 text-sm ">+</a>
   </div>
-  </div>
+</div>
 <form action="{{ route('comments.index', $user->id) }}" method="GET" class="py-5">
     <input type="text" name="search" placeholder="Pesquisar" class="md:w-1/6 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500">
     <button class="shadow bg-gray-200 hover:bg-gray-100 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded">Pesquisar</button>
