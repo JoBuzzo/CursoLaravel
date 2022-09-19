@@ -3,7 +3,7 @@
 @section('title', "Comentários do Usuáro {$user->name}")
 
 @section('content')
-<div class="text-right my-8">
+<div class="text-right my-3">
   <a href="{{ route('users.index') }}"  class="bg-red-500 hover:bg-red-400 text-white rounded-full py-2 px-4 place-self-end">Voltar</a>
 </div>
 
